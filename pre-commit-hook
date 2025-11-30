@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+STAGED=$(git diff --cached --name-only --diff-filter=ACM)
+if [ -z "$STAGED" ]; then exit 0; fi
+python3 sast.py scan $STAGED --json /tmp/bss_precommit.json --html /tmp/bss_precommit.html
+if [ $? -ne 0 ]; then
+  echo "BSS detected issues. Aborting commit."
+  exit 1
+fi
+exit 0

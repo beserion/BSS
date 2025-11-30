@@ -1,0 +1,30 @@
+- id: PY001
+  lang: python
+  title: Use of eval()
+  severity: HIGH
+  description: Detect use of eval() which can lead to code execution vulnerabilities.
+- id: PY002
+  lang: python
+  title: Hardcoded credentials (simple)
+  severity: MEDIUM
+  description: Literal strings that look like passwords or tokens.
+- id: PY003
+  lang: python
+  title: subprocess with shell=True
+  severity: HIGH
+  description: Use of subprocess with shell=True can lead to shell injection.
+- id: C001
+  lang: c
+  title: Use of gets()
+  severity: HIGH
+  description: gets() is unsafe and causes buffer overflows.
+- id: C002
+  lang: c
+  title: strcpy usage
+  severity: MEDIUM
+  description: strcpy without bounds may overflow.
+- id: JS001
+  lang: js
+  title: Unsanitized innerHTML assignment
+  severity: HIGH
+  description: Assigning to innerHTML with unsanitized data can introduce XSS.
