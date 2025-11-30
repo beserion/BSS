@@ -12,7 +12,7 @@ This repository is a polished, production-grade demo including:
 
 ## Quickstart (Docker)
 ```bash
-git clone <repo-url>
+git clone https://github.com/beserion/BSS.git
 cd bss_full
 docker build -t bss-sast -f docker/Dockerfile .
 docker run --rm -v $(pwd):/app bss-sast python3 sast.py scan tests --json report.json --html report.html
