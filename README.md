@@ -1,4 +1,4 @@
-# BSS — Big Security Solution
+# BSS
 
 BSS (Big Security Solution) is an advanced Static Application Security Testing (SAST) toolkit
 designed to find common and complex security issues in Python, C, and JavaScript projects.
@@ -13,7 +13,7 @@ This repository is a polished, production-grade demo including:
 ## Quickstart (Docker)
 ```bash
 git clone https://github.com/beserion/BSS.git
-cd bss_full
+cd BSS
 docker build -t bss-sast -f docker/Dockerfile .
 docker run --rm -v $(pwd):/app bss-sast python3 sast.py scan tests --json report.json --html report.html
 ```
